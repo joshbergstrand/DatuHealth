@@ -1,0 +1,284 @@
+html, body {
+  font-size: 100%;
+}
+body {
+  color: #231F20;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.25;
+}
+.inline-list {
+  list-style: none;
+  margin-left: -1.375rem;
+  margin-right: 0;
+  margin: 0 auto 1.0625rem auto;
+  overflow: hidden;
+  padding: 0;
+}
+.inline-list > li {
+  display: block;
+  float: left;
+  list-style: none;
+  margin-left: 1.375rem;
+}
+.inline-list > li > * {
+  display: block;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
+/* Type color classes */
+.gray {
+  color:#929395;
+}
+.reverse {
+  color:white;
+}
+.orange {
+  color:#ff8300;
+}
+
+/* Typography resets */
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/* Default Link Styles */
+
+a {
+  color: #428AE4;
+  line-height: inherit;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #346EB6;
+}
+a img {
+  border: none;
+}
+
+/* Default paragraph styles */
+
+p {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+}
+
+/* Default header styles */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #55565A;
+  font-family: "Proxima Nova Soft", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.125;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  text-rendering: optimizeLegibility;
+}
+h1, .h1 {
+  font-size: 2.566rem;
+}
+h2, .h2 {
+  font-size: 2.027rem;
+}
+h3, .h3 {
+  font-size: 1.602rem;
+}
+h4, .h4 {
+  font-size: 1.266rem;
+}
+h5, .h5 {
+  font-size: 1.125rem;
+}
+h6, .h6, p, .normal {
+  font-size: 1rem;
+}
+.small {
+  font-size: .889rem;
+}
+.smaller {
+  font-size: .79rem;
+}
+.smallest {
+  font-size: .702rem;
+}
+
+/* Helpful Typography Defaults */
+
+em, i {
+  font-style: italic;
+  line-height: inherit;
+}
+strong, b {
+  font-weight: bold;
+  line-height: inherit;
+}
+small {
+  font-size: 60%;
+  line-height: inherit;
+}
+
+/* Lists */
+
+ul, ol, dl {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+  list-style-position: outside;
+  margin-bottom: 1.25rem;
+}
+ul {
+  margin-left: 1.1rem;
+}
+ul.no-bullet {
+  margin-left: 0;
+}
+ul.no-bullet li ul, ul.no-bullet li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* Unordered Lists */
+
+ul li ul, ul li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+}
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+  list-style: inherit;
+}
+ul.square {
+  list-style-type: square;
+  margin-left: 1.1rem;
+}
+ul.circle {
+  list-style-type: circle;
+  margin-left: 1.1rem;
+}
+ul.disc {
+  list-style-type: disc;
+  margin-left: 1.1rem;
+}
+ul.no-bullet {
+  list-style: none;
+}
+
+/* Ordered Lists */
+
+ol {
+  margin-left: 1.4rem;
+}
+ol li ul, ol li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+/*Small breakpoint, screens 641 and up*/
+@media only screen and (min-width: 40.0625em) {
+  h1, .h1 {
+    font-size: 2.887rem;
+  }
+  h2, .h2 {
+    font-size: 2.281rem;
+  }
+  h3, .h3 {
+    font-size: 1.802rem;
+  }
+  h4, .h4 {
+    font-size: 1.424rem;
+  }
+  h5, .h5 {
+    font-size: 1.266rem;
+  }
+  h6, .h6, p, .normal {
+    font-size: 1.125rem;
+  }
+  .small {
+    font-size: 1rem;
+  }
+  .smaller {
+    font-size: .9375rem;
+  }
+  .smallest {
+    font-size: .75rem;
+  }
+}
+/*Medium breakpoint, screens 769 and up*/
+@media only screen and (min-width: 48.0625em) {
+  h1, .h1 {
+    font-size: 3.247rem;
+  }
+  h2, .h2 {
+    font-size: 2.566rem;
+  }
+  h3, .h3 {
+    font-size: 2.027rem;
+  }
+  h4, .h4 {
+    font-size: 1.602rem;
+  }
+  h5, .h5 {
+    font-size: 1.424rem;
+  }
+  h6, .h6, p, .normal {
+    font-size: 1.266rem;
+  }
+}
+/*Large breakpoint, screens 1025 and up*/
+@media only screen and (min-width: 64.0625em) {
+  h1, .h1 {
+    font-size: 3.653rem;
+  }
+  h2, .h2 {
+    font-size: 2.887rem;
+  }
+  h3, .h3 {
+    font-size: 2.281rem;
+  }
+  h4, .h4 {
+    font-size: 1.802rem;
+  }
+  h5, .h5 {
+    font-size: 1.602rem;
+  }
+  h6, .h6, p, .normal {
+    font-size: 1.424rem;
+  }
+}
+/*Xlarge breakpoint, screens 1281 and up*/
+@media only screen and (min-width: 80.0625em) {
+  h1, .h1 {
+    font-size: 4.11rem;
+  }
+  h2, .h2 {
+    font-size: 3.247rem;
+  }
+  h3, .h3 {
+    font-size: 2.566rem;
+  }
+  h4, .h4 {
+    font-size: 2.027rem;
+  }
+  h5, .h5 {
+    font-size: 1.802rem;
+  }
+  h6, .h6, p, .normal {
+    font-size: 1.602rem;
+  }
+}

@@ -1,80 +1,155 @@
-header {
-background-color: white;
-height:5em;
-}
-
-header h1.logo {
-  margin-top:17px;
-  display: inline-block;
-}
-
-nav span a {
-  margin-top:1em;
-  display: inline-block;
-  float:right;
-  height:48px;
-  width:48px;
-  background-color: #ff8300;
-  border-radius: 100%;
-
-}
-
-nav ul {
-  display: none;
-}
-
-@media only screen and (min-width: 58.75em) {
-
-nav span a {
-  height:0;
-  width:0;
-}
-
-nav ul {
-  display: inline;
-}
+/*menu component*/
 
 header {
-  height:7.5em;
+  background: white;
+  padding-top: 1em;
 }
-
 header h1.logo {
-
-  margin:23px 0 0 0;
+  max-width: 90em;
+  padding-left: 20px;
+  position: relative;
+  z-index: 1;
+  margin: 0;
 }
-
-nav ul.inline-list {
-margin:35px 0 0 0;
+nav ul {
+  list-style: none;
+  max-height: 0;
+  margin-left: 0;
+  overflow: hidden;
+  transition: max-height .2s ease-in-out;
 }
-
+.nav.is-open nav ul {
+  margin-top: 1em;
+  max-height: 21em;
+}
 nav ul li {
-  line-height:54px;
-
+  line-height: 4em;
+  height: 4em;
+  text-align: center;
 }
-
-nav .button {
-margin-bottom: 0;
-}
-
-nav {
-height:3.75em
-line-height:3.75em;
-}
-
 nav ul li a {
-  color:#ff8300;
-  font-size:0.875rem;
+  color: #ff8300;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
+  display: block;
 }
-
 nav ul li a:hover {
-  color:#E57500;
+  color: #E57500;
+  background-color: #fafafa;
 }
-
 nav ul li.active a {
-  color:#55565A;
+  color: #55565A;
+  background-color: transparent;
+}
+nav ul li.active a:hover {
+  color: ##231F20;
+  background-color: #fafafa;
+}
+nav li.button-contain {
+  margin: 0 1.25em;
 }
 
+/*Menu button styles*/
+
+.nav span a {
+  position: absolute;
+  top: 16px;
+  right: 1.125em;
+  height: 3em;
+  width: 3em;
+  background-color: #ff8300;
+  border-radius: 50%;
+  z-index: 10;
+}
+.nav span a:hover {
+  background-color: #E57500;
+}
+.nav.is-open span a {
+  background-color: #55565A;
+}
+.nav.is-open span a:hover {
+  background-color: #444448;
+}
+.nav span a::after, .nav span a::before {
+  width: 100%;
+  position: absolute;
+}
+.nav span a::after {
+  content: 'menu';
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+}
+.nav span a::before {
+  content: '';
+  background-image: url(../img/icons/icon-close.svg);
+  background-repeat: no-repeat;
+  height: 3em;
+  background-position: 50% 50%;
+}
+.nav.is-open span a::after {
+  top: 4em;
+}
+.nav.is-open span a::before {
+  top: 0;
+}
+.nav span a::after {
+  top: 40%;
+}
+.nav span a::before {
+  top: -2em;
+}
+.nav.is-open span a::after {
+  transform: scale(.4);
+}
+.nav span a::before {
+  transform: scale(.2);
+}
+.nav span a::after, .nav.is-open span a::before {
+  transform: scale(1);
+  transition: top .25s, transform .25s;
+}
+@media only screen and (min-width: 58.75em) {
+  .nav span a, .nav span a::before, .nav span a::after {
+    height: 0;
+    width: 0;
+  }
+  header {
+    padding: 28px 0 27px 0;
+  }
+  nav {
+    float: right;
+    margin-right: 1.25em;
+  }
+  header h1.logo {
+    float: left;
+  }
+  nav ul {
+    display: inline;
+  }
+  nav ul li {
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+  }
+  nav ul li a {
+    padding: 0 1.25em;
+  }
+  nav ul li a:hover, nav ul li.active a:hover {
+    background-color: transparent;
+  }
+  nav li.button-contain {
+    margin: 0;
+  }
+  nav .button.expand {
+    margin-bottom: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

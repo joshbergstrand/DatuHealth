@@ -29,13 +29,12 @@
 <body>
   <header>
     <div class="row">
-      <div class="large-12 medium-12 small-12 columns">
-        <h1 class="logo left">
-          <a href="/">
+      <!--<div class="large-12 medium-12 small-12 columns">-->
+        <h1 class="logo">
+          <a href="index.html" title="Dātu Health">
             <picture>
               <source srcset="img/logo-black.svg" media="(min-width: 58.75em)" type="image/svg+xml">
-                <source srcset="img/logo-black-small.svg"  type="image/svg+xml">
-
+              <source srcset="img/logo-black-small.svg" type="image/svg+xml">
               <img src="img/logo-black.png" alt="Datu Health">
             </picture>
           </a>
@@ -44,10 +43,10 @@
           <nav>
 
 
-          <span>
-            <a href="#menu"></a>
-              </span>
-            <ul class="inline-list right">
+            <span>
+              <a class="menu-button" href=""></a>
+            </span>
+            <ul>
               <li class="active">
                 <a href="#">Our solution</a>
               </li>
@@ -60,14 +59,14 @@
               <li>
                 <a href="#">Perspective</a>
               </li>
-              <li>
-                <a class="button ghost" href="#">Contact</a>
+              <li class="button-contain">
+                <a class="button ghost expand" href="#">Contact</a>
               </li>
             </ul>
 
-            </nav>
+          </nav>
         </div>
-      </div>
+      <!-- </div> -->
     </div>
   </header>
 
@@ -78,6 +77,14 @@
   <script src="js/foundation.min.js"></script>
   <script>
     $(document).foundation();
+  </script>
+  <script>
+    $(document).ready(function() {
+      $(".menu-button").click(function() {
+        $(".nav").toggleClass("is-open");
+        return false;
+      });
+    });
   </script>
 </body>
 

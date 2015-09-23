@@ -19,6 +19,10 @@ body {
   padding: 0;
   position: relative; }
 
+a {
+  transition: color .2s ease-in-out;
+}
+
 a:hover {
   cursor: pointer; }
 

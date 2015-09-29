@@ -47,7 +47,7 @@ nav ul li.active a:hover {
   color: ##231F20;
   background-color: #fafafa;
 }
-nav li.button-contain {
+nav ul li.button-contain {
   margin: 0 1.25em;
 }
 
